@@ -9,10 +9,8 @@ package unitec.primavera;
  *
  * @author T-107
  */
-public class TarjetaNomina extends Tarjetas implements Pagos{
+public interface Pagos {
     
-    public void pagar(){
-        System.out.println("Pagando nomina");
-    }
+    public void pagar();
     
 }

@@ -12,6 +12,7 @@ package unitec.primavera;
 public abstract class Tarjetas {
     
     private String nombre;
+    private int numero;
 
     public String getNombre() {
         return nombre;
@@ -20,9 +21,17 @@ public abstract class Tarjetas {
     public void setNombre(String Nombre) {
         this.nombre = nombre;
     }
-    
-    public void pagar(){
-        
+   
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public Tarjetas() {
     }
     
 }

@@ -5,14 +5,12 @@
  */
 package unitec.primavera;
 
+import org.springframework.data.mongodb.repository.MongoRepository;
+
 /**
  *
  * @author T-107
  */
-public class TarjetaNomina extends Tarjetas implements Pagos{
-    
-    public void pagar(){
-        System.out.println("Pagando nomina");
-    }
+public interface RepositorioMensajes extends MongoRepository<Mensajito, String>{
     
 }
