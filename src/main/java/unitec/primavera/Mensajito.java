@@ -20,6 +20,13 @@ public class Mensajito {
     private String cuerpo;
     private LocalDate fecha;
 
+    public Mensajito(String id, String titulo, String cuerpo, LocalDate fecha) {
+        this.id = id;
+        this.titulo = titulo;
+        this.cuerpo = cuerpo;
+        this.fecha = fecha;
+    }
+
     public String getId() {
         return id;
     }
@@ -59,6 +66,11 @@ public class Mensajito {
     }
 
     public Mensajito() {
+    }
+
+    @Override
+    public String toString() {
+        return "Mensajito{" + "id=" + id + ", titulo=" + titulo + ", cuerpo=" + cuerpo + ", fecha=" + fecha + '}';
     }
     
     
