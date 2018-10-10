@@ -5,10 +5,13 @@
  */
 package unitec.primavera;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -40,4 +43,16 @@ public class ControladorMensajitos {
         return mensa.findById(id).get();
     }
     
+    //Vamos a guardar para ello siempre se ocupa el post
+    @PostMapping(path="/mensaje", consumes="application/json")
+    public Estatus guardar(@RequestBody String json) throws Exception{
+        //Recibimos a json con los brazos abiertos
+        ObjectMapper maper=new ObjectMapper();
+        Mensajito mensajito=maper.readValue(json, Mensajito.class);
+        System.out.println(mensajito);
+        Estatus estatus= new Estatus();
+        estatus.setSuccess(true);
+        estatus.setMensaje("Mesajito guardado con exito");
+        return estatus;
+    }
 }
