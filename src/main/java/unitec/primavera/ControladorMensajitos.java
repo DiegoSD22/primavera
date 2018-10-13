@@ -52,7 +52,7 @@ public class ControladorMensajitos {
         System.out.println(mensajito);
         Estatus estatus= new Estatus();
         estatus.setSuccess(true);
-        estatus.setMensaje("Mesajito guardado con exito");
+        estatus.setMensaje("Mensajito guardado con exito");
         return estatus;
     }
 }

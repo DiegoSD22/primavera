@@ -14,6 +14,8 @@ public class PrimaveraApplication implements CommandLineRunner {
     RepositorioPagos repoPagos;
     @Autowired
     RepositorioMensajes repoMensa;
+    @Autowired
+    RepositorioClientes repoCli;
 
     public static void main(String[] args) {
         SpringApplication.run(PrimaveraApplication.class, args);
@@ -35,8 +37,9 @@ public class PrimaveraApplication implements CommandLineRunner {
         //Buscamos por id
         //System.out.println(repoMensa.findById("5bb41e814fe49820f885ba4a").get());
         //Buscamos por titulo
-        repoMensa.save(new Mensajito("malo", "yo", "topoyiya", LocalDate.now()));
-        System.out.println(repoMensa.findByTitulo("yo"));
+        //repoMensa.save(new Mensajito("malo", "yo", "topoyiya", LocalDate.now()));
+        //System.out.println(repoMensa.findByTitulo("yo"));
+        repoCli.save(new Cliente("diego", "diegosd@gmail.com", new Direccion("calle 35", "ecatepec", 55450)));
 
     }
 }
