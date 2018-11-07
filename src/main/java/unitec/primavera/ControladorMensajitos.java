@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = {https://angular-kmullo.stackblitz.io})
+@CrossOrigin(origins = {"https://angular-kmullo.stackblitz.io"})
 
 public class ControladorMensajitos {
     
